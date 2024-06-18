@@ -9,7 +9,7 @@ body
 #container 
 {
     height:700px;
-    width: 375px;
+    width: 400px;
     border-radius: 2em;
     background-color: black;
     display: flex;
@@ -88,4 +88,6 @@ button
 
 #zero {
     min-width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
