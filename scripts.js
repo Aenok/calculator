@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 
             if(e.target.id == "perc") {
                 if(!next) {
-                    total = total / 100;
+                    num1 /= 100;
+                    total = num1;
                     display.innerText = total;
                 } else {
                     num2 = num2 / 100;
@@ -45,8 +46,17 @@ document.addEventListener("DOMContentLoaded", function(event){
             }
 
             if(e.target.classList.contains("sign2") && e.target.id != "eq") {
-                op = e.target.id;
-                next = !next;
+                if (op.length == 0) {
+                    op = e.target.id;
+                    next = !next;
+                } else {
+                    num1 = operate(num1, num2, op);
+                    total = num1;
+                    display.innerText = total;
+                    num2 = "";
+                    op = e.target.id;
+                    //next = !next;
+                }
             }
 
             if(e.target.id == "eq") {
